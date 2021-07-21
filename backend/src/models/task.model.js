@@ -1,0 +1,41 @@
+export default function(sequelize,Sequelize){ class Task extends Sequelize.Model{
+		static associate(Models){
+			Task.belongsToMany(Models.Administrator,{
+				through:{
+					model:Models.AddTask
+				},
+				foreignKey:'id_task',
+				onDelete:'CASCADE'
+			})
+			Task.belongsToMany(Models.Employee,{
+				through:{
+					model:Models.Make
+				},
+				foreignKey:'id_task',
+				onDelete:'CASCADE'
+			})
+		}
+	}
+	Task.init({
+		id_task:{
+			type:Sequelize.DataTypes.INTEGER,
+			allowNull:false,
+			autoIncrement:true,
+			primaryKey:true,
+			unique:true
+		},
+		name:{
+			type:Sequelize.DataTypes.STRING(255),
+			allowNull:false
+		},
+		description:Sequelize.DataTypes.STRING(255),
+		priority:{
+			type:Sequelize.DataTypes.STRING(11),
+			allowNull:false
+		}
+	},{
+		modelName:'task',
+		sequelize
+	})
+	return Task;
+}

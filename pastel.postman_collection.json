@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "ea207b74-bad8-4784-9c8f-10739caf4a5c",
+		"name": "pastel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "pepita@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test123",
+							"type": "text"
+						},
+						{
+							"key": "fullname",
+							"value": "Pepe Grillo",
+							"type": "text"
+						},
+						{
+							"key": "landline",
+							"value": "+56565621351321",
+							"type": "text"
+						},
+						{
+							"key": "cellpone",
+							"value": "7777777",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "calle siempre viva",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1995/07/04",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/mr/Downloads/kirin.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/login/signup",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signinAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "opotunidades@smn.com.br",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/login/signin",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ludwin.flores.mamani@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/login/signin",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTask",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9wb3R1bmlkYWRlc0BzbW4uY29tLmJyIiwicm9sIjoiYWRtaW5pc3RyYXRvciIsImlkUm9sIjoxLCJmdWxsbmFtZSI6IkJydW5vIiwiaW1hZ2UiOiIvdXBsb2Fkcy9pbWFnZSAtIDE2MjY3MTY3NDg3ODgiLCJpYXQiOjE2MjY4MDM0NTQsImV4cCI6MTYyNjg4OTg1NH0.KkLrAXBkdwsnDYZcGtIzg58yW-xsJfG0wWMiNeQoBgk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/task",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9wb3R1bmlkYWRlc0BzbW4uY29tLmJyIiwicm9sIjoiYWRtaW5pc3RyYXRvciIsImlkUm9sIjoyLCJmdWxsbmFtZSI6IkJydW5vIiwiaW1hZ2UiOm51bGwsImlhdCI6MTYyNjgyMzk4NCwiZXhwIjoxNjI2OTEwMzg0fQ.7vadMeYRX65ymsfuBYTBoNpaV_GSURAKpvDIcuFNjrY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idEmployee",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Agh fue mano",
+							"type": "text"
+						},
+						{
+							"key": "dateFinish",
+							"value": "Thu Jul 22 2021",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Need to improve ur SQLaa",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/task",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9wb3R1bmlkYWRlc0BzbW4uY29tLmJyIiwicm9sIjoiYWRtaW5pc3RyYXRvciIsImlkUm9sIjoxLCJmdWxsbmFtZSI6IkJydW5vIiwiaW1hZ2UiOiIvdXBsb2Fkcy9pbWFnZSAtIDE2MjY3MTY3NDg3ODgiLCJpYXQiOjE2MjY3MTY5MzEsImV4cCI6MTYyNjgwMzMzMX0.DWdUON_c5c3kG6SmAPLGJZArIgOXBYcODMlm9AhHIV4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/task/4",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myTaskAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1ZHdpbi5mbG9yZXMubWFtYW5pQGdtYWlsLmNvbSIsInJvbCI6ImVtcGxveWVlIiwiaWRSb2wiOjYsImZ1bGxuYW1lIjoiTHVkd2luIEZsb3JlcyBNYW1hbmkiLCJsYW5kbGluZSI6IjY0MTMxNTE1NDQ1NiIsImNlbGxwaG9uZSI6Iis1OTE3NTI5ODQ2MCIsImFkZHJlc3MiOiIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNjI2ODIzNzcyLCJleHAiOjE2MjY5MTAxNzJ9.l_BN-xnBDX_qWwIMDxSa7X0aAGciDSOU0tGCT_ok8wQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/task/mytasks/all",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task",
+						"mytasks",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MyTaskInProgress",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1ZHdpbi5mbG9yZXMubWFtYW5pQGdtYWlsLmNvbSIsInJvbCI6ImVtcGxveWVlIiwiaWRSb2wiOjYsImZ1bGxuYW1lIjoiTHVkd2luIEZsb3JlcyBNYW1hbmkiLCJsYW5kbGluZSI6IjY0MTMxNTE1NDQ1NiIsImNlbGxwaG9uZSI6Iis1OTE3NTI5ODQ2MCIsImFkZHJlc3MiOiIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNjI2ODIzNzcyLCJleHAiOjE2MjY5MTAxNzJ9.l_BN-xnBDX_qWwIMDxSa7X0aAGciDSOU0tGCT_ok8wQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/task/mytasks/all",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task",
+						"mytasks",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifiedMyTaskStatus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1ZHdpbi5mbG9yZXMubWFtYW5pQGdtYWlsLmNvbSIsInJvbCI6ImVtcGxveWVlIiwiaWRSb2wiOjYsImZ1bGxuYW1lIjoiTHVkd2luIEZsb3JlcyBNYW1hbmkiLCJsYW5kbGluZSI6IjY0MTMxNTE1NDQ1NiIsImNlbGxwaG9uZSI6Iis1OTE3NTI5ODQ2MCIsImFkZHJlc3MiOiIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNjI2ODIzNzcyLCJleHAiOjE2MjY5MTAxNzJ9.l_BN-xnBDX_qWwIMDxSa7X0aAGciDSOU0tGCT_ok8wQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "status",
+							"value": "terminated",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://simulatepastel.herokuapp.com/task/mytasks/progress/27",
+					"protocol": "https",
+					"host": [
+						"simulatepastel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task",
+						"mytasks",
+						"progress",
+						"27"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "pastel",
+  "version": "1.0.0",
+  "description": "these is a simulate scenario for a Pastel Enterprice",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "build": "babel src -d dist ",
+    "devbabel": "nodemon src/index.js --exec babel-node",
+    "start": "node dist/index.js"
+  },
+  "author": "Ludwin Flores <ludwinss@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.14.7",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.3",
+    "pg": "^8.6.0",
+    "pg-native": "^3.0.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-private-methods": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/runtime": "^7.14.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "nodemon": "^2.0.12"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
+}
